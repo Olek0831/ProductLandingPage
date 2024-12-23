@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url'
-import { mergeConfig, defineConfig, configDefaults } from 'vitest/config'
+import { mergeConfig, defineConfig, configDefaults, coverageConfigDefaults } from 'vitest/config'
 import viteConfig from './vite.config'
 
 export default mergeConfig(
@@ -9,6 +9,10 @@ export default mergeConfig(
       environment: 'jsdom',
       exclude: [...configDefaults.exclude],
       root: fileURLToPath(new URL('./', import.meta.url)),
+      coverage: {
+        provider: 'v8',
+        exclude: [...coverageConfigDefaults.exclude, './src/types.ts'],
+      },
     },
   }),
 )

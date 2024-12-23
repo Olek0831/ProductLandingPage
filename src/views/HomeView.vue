@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>This is home view</main>
+  <main>
+    {{ $t('hello') }}
+  </main>
 </template>
