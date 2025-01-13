@@ -1,10 +1,13 @@
-import { mount } from '@vue/test-utils'
 import { describe, it, expect, beforeEach } from 'vitest'
+import { mount } from '@vue/test-utils'
+import { createPinia } from 'pinia'
 
 import router from '@/router'
 import i18n from '@/plugins/i18n'
 import App from '@/App.vue'
 import HomeView from '@/views/HomeView.vue'
+
+const pinia = createPinia()
 
 beforeEach(async () => {
   router.push('/')
@@ -15,7 +18,7 @@ describe('App', () => {
   it('should render home view via routing', () => {
     const wrapper = mount(App, {
       global: {
-        plugins: [i18n, router],
+        plugins: [i18n, router, pinia],
       },
     })
 
@@ -25,7 +28,7 @@ describe('App', () => {
   it('should change language to nl via routing', async () => {
     const wrapper = mount(App, {
       global: {
-        plugins: [i18n, router],
+        plugins: [i18n, router, pinia],
       },
     })
 
@@ -35,10 +38,10 @@ describe('App', () => {
     expect(wrapper.vm.$i18n.locale).toBe('nl')
   })
 
-  it('should redirect to the base route with the default locale if locale not available', async () => {
+  it('should redirect to the base route with the default locale if locale is not available', async () => {
     const wrapper = mount(App, {
       global: {
-        plugins: [i18n, router],
+        plugins: [i18n, router, pinia],
       },
     })
 

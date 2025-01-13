@@ -1,0 +1,31 @@
+@forward 'reset';
+@forward 'icons';
+@forward 'animations';
+
+@use 'variables';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: variables.$width-sm) {
+    max-width: variables.$container-width-sm;
+  }
+
+  @media (min-width: variables.$width-md) {
+    max-width: variables.$container-width-md;
+  }
+
+  @media (min-width: variables.$width-lg) {
+    max-width: variables.$container-width-lg;
+  }
+
+  @media (min-width: variables.$width-xl) {
+    max-width: variables.$container-width-xl;
+  }
+
+  @media (min-width: variables.$width-xxl) {
+    max-width: variables.$container-width-xxl;
+  }
+}
