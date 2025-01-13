@@ -1,0 +1,16 @@
+[class^='icon--'] {
+  display: block;
+  background-size: cover;
+}
+
+.icon--hamburger {
+  width: 30px;
+  height: 30px;
+  background-image: url('@/assets/icons/menu.svg');
+}
+
+.icon--close {
+  width: 30px;
+  height: 30px;
+  background-image: url('@/assets/icons/close.svg');
+}

@@ -1,0 +1,31 @@
+.animation-hide {
+  animation: hide 0.2s;
+  transform: scaleY(0);
+  display: none;
+}
+
+.animation-show {
+  animation: show 0.2s;
+  transform: scaleY(1);
+  display: block !important;
+}
+
+@keyframes hide {
+  from {
+    transform: scaleY(1);
+    display: block;
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes show {
+  from {
+    transform: scaleY(0);
+    display: none;
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
