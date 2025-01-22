@@ -14,5 +14,7 @@ import DefaultLayout from '@/layout/DefaultLayout.vue'
 <style lang="scss">
 main {
   height: 1000px;
+  background: url('@/assets/images/businessman-sitting-by-table-cafe.jpg');
+  background-size: cover;
 }
 </style>

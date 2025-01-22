@@ -1,6 +1,7 @@
 import { RouterView, createRouter, createWebHistory } from 'vue-router'
 
 import i18n from '@/plugins/i18n'
+
 import HomeView from '@/views/HomeView.vue'
 
 import type { Locale } from '@/types'
@@ -42,7 +43,5 @@ router.beforeEach((to, _from) => {
       (localeParam.toString() as Locale) || i18n.global.fallbackLocale
   }
 })
-
-export { routes, availableLocales }
 
 export default router

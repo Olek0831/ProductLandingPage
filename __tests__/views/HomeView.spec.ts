@@ -1,7 +1,9 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createPinia } from 'pinia'
+
 import i18n from '@/plugins/i18n'
+
 import HomeView from '@/views/HomeView.vue'
 import DefaultLayout from '@/layout/DefaultLayout.vue'
 

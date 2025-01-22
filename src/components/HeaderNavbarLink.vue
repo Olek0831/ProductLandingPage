@@ -17,7 +17,7 @@ const props = defineProps<{
   margin: 10px;
   font-size: v.$menu-font-size;
   font-weight: v.$font-weight-regular;
-  line-height: 18px;
+  line-height: v.$menu-line-height;
 
   &:hover {
     color: v.$color-primary;
