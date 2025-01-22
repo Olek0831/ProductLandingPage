@@ -1,9 +1,12 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
+
+import i18n from '@/plugins/i18n'
+
+import { useGeneralStore } from '@/store'
 import HeaderNavbar from '@/components/HeaderNavbar.vue'
 import HeaderNavbarLink from '@/components/HeaderNavbarLink.vue'
-import { useGeneralStore } from '@/store'
 
 const pinia = setActivePinia(createPinia())
 
@@ -15,7 +18,7 @@ describe('HeaderNavbar', () => {
 
     const wrapper = mount(HeaderNavbar, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
     })
 
@@ -25,7 +28,7 @@ describe('HeaderNavbar', () => {
   it('should change visibility of hamburger button according to width', async () => {
     const wrapper = mount(HeaderNavbar, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
     })
 
@@ -45,7 +48,7 @@ describe('HeaderNavbar', () => {
   it('should toggle visibility of links when hamburger button is clicked', async () => {
     const wrapper = mount(HeaderNavbar, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
       attachTo: document.body,
     })

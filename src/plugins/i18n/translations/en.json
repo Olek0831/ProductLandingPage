@@ -1,3 +1,19 @@
 {
+  "system": {
+    "currentLang": "English",
+    "currentLangIso": "EN",
+    "langs": {
+      "en": "English",
+      "nl": "Nederlands",
+      "pl": "Polski"
+    }
+  },
+  "general": {
+    "accept": "Save",
+    "cancel": "Cancel"
+  },
+  "language-switcher": {
+    "title": "Choose language"
+  },
   "hello": "Hello World!"
 }

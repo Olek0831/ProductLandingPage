@@ -25,7 +25,7 @@ const store = useGeneralStore()
   left: 0;
 
   @media (min-width: v.$width-md) {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.45); // transparent;
     height: v.$header-height;
   }
 

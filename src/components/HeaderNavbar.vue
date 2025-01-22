@@ -2,6 +2,7 @@
 import { ref, type Ref } from 'vue'
 import { useGeneralStore } from '@/store'
 import HeaderNavbarLink from './HeaderNavbarLink.vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 
 const store = useGeneralStore()
 
@@ -48,6 +49,7 @@ function toggleMenu() {
           :key="section.name"
           :section="section"
         />
+        <LanguageSwitcher />
       </div>
     </div>
   </nav>

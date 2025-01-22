@@ -1,3 +1,19 @@
 {
+  "system": {
+    "currentLang": "Polski",
+    "currentLangIso": "PL",
+    "langs": {
+      "en": "English",
+      "nl": "Nederlands",
+      "pl": "Polski"
+    }
+  },
+  "general": {
+    "accept": "Zapisz",
+    "cancel": "Anuluj"
+  },
+  "language-switcher": {
+    "title": "Wybierz język"
+  },
   "hello": "Witaj Świecie!"
 }

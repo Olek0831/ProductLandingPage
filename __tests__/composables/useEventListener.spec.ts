@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
+import { withSetup } from '../__helpers__/withSetup'
 
 import { useEventListener } from '@/composables/useEventListener'
-import { withSetup } from '../__helpers__/withSetup'
 
 describe('useEventListener', () => {
   it('registers event listener when app is mounted, and removes it when app is unmounted', async () => {
@@ -14,6 +14,6 @@ describe('useEventListener', () => {
     app.unmount()
 
     await window.dispatchEvent(new Event('click'))
-    expect(eventHandler).toHaveBeenCalledTimes(1) //because was already called once - app unmounts, funcion is not called
+    expect(eventHandler).toHaveBeenCalledTimes(1) // because it was already called once - app unmounts, funcion is not called
   })
 })

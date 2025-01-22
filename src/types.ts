@@ -6,4 +6,9 @@ export type Section = {
   name: string
 }
 
+export type SelectOption = {
+  label: string
+  value: string | number
+}
+
 export type EventTarget = HTMLElement | Document | Window

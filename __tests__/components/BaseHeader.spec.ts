@@ -1,9 +1,12 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
+
+import i18n from '@/plugins/i18n'
+
+import { useGeneralStore } from '@/store'
 import BaseHeader from '@/components/BaseHeader.vue'
 import HeaderNavbar from '@/components/HeaderNavbar.vue'
-import { useGeneralStore } from '@/store'
 
 const pinia = setActivePinia(createPinia())
 
@@ -11,7 +14,7 @@ describe('BaseHeader', () => {
   it('should render logo', () => {
     const wrapper = mount(BaseHeader, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
     })
 
@@ -21,7 +24,7 @@ describe('BaseHeader', () => {
   it('should render navbar component', () => {
     const wrapper = mount(BaseHeader, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
     })
 
@@ -31,7 +34,7 @@ describe('BaseHeader', () => {
   it('should make header sticky when scrolled', async () => {
     const wrapper = mount(BaseHeader, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
     })
     const header = wrapper.find('header')
@@ -51,7 +54,7 @@ describe('Logo', () => {
   it('should scroll to top when clicked', () => {
     const wrapper = mount(BaseHeader, {
       global: {
-        plugins: [pinia],
+        plugins: [i18n, pinia],
       },
     })
     window.scrollTo = vi.fn()
